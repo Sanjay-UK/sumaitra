@@ -1,0 +1,24 @@
+version: 1
+frontend:
+  phases:
+    build:
+      commands:
+        - echo "Static site — no build step required"
+  artifacts:
+    baseDirectory: /
+    files:
+      - index.html
+      - products.html
+      - admin.html
+      - style.css
+      - script.js
+      - admin.js
+      - api.js
+      - assets/**/*
+      - .env.example
+  cache:
+    paths: []
+customRedirects:
+  - source: /admin
+    target: /admin.html
+    status: '200'

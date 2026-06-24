@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="assets/logo.png" type="image/png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <title>Admin | Sumaitra Innovations</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="admin-page">
+    <div class="bg-glow blob-1"></div>
+    <div class="bg-glow blob-2"></div>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo-container">
+            <img src="assets/logo.png" alt="Sumaitra Innovations Logo" class="brand-logo">
+        </a>
+        <a href="index.html" class="btn btn-outline">Back to Site</a>
+    </nav>
+
+    <main class="container admin-main">
+        <!-- Login -->
+        <section id="login-section" class="admin-panel card">
+            <h1>Admin Login</h1>
+            <p class="admin-subtitle">Sign in to view customer inquiries and manage messages.</p>
+
+            <form id="login-form" class="admin-form">
+                <div class="form-group">
+                    <label for="admin-username">Username</label>
+                    <input type="text" id="admin-username" name="username" autocomplete="username" required>
+                </div>
+                <div class="form-group">
+                    <label for="admin-password">Password</label>
+                    <input type="password" id="admin-password" name="password" autocomplete="current-password" required>
+                </div>
+                <p id="login-feedback" class="form-feedback" hidden></p>
+                <button type="submit" class="btn btn-primary w-100">Sign In</button>
+            </form>
+        </section>
+
+        <!-- Dashboard -->
+        <section id="dashboard-section" class="admin-dashboard" hidden>
+            <div class="admin-header">
+                <div>
+                    <h1>Inquiry Dashboard</h1>
+                    <p class="admin-subtitle">Logged in as <span id="admin-user-label"></span></p>
+                </div>
+                <div class="admin-actions">
+                    <button type="button" id="refresh-btn" class="btn btn-secondary">Refresh</button>
+                    <button type="button" id="logout-btn" class="btn btn-outline">Log Out</button>
+                </div>
+            </div>
+
+            <div class="admin-stats">
+                <div class="stat-card card">
+                    <span class="stat-number" id="stat-total">0</span>
+                    <span class="stat-label">Total Messages</span>
+                </div>
+                <div class="stat-card card">
+                    <span class="stat-number" id="stat-unread">0</span>
+                    <span class="stat-label">Unread</span>
+                </div>
+            </div>
+
+            <p id="dashboard-feedback" class="form-feedback" hidden></p>
+
+            <div id="inquiries-list" class="inquiries-list"></div>
+            <p id="empty-state" class="empty-state" hidden>No inquiries yet.</p>
+        </section>
+    </main>
+
+    <script src="api.js"></script>
+    <script src="admin.js"></script>
+</body>
+
+</html>

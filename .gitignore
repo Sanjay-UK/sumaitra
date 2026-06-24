@@ -1,0 +1,9 @@
+node_modules/
+.env
+data/inquiries.json
+deploy/
+mcp_quick_startup.md
+aws_setup.md
+DEPLOYMENT.md
+lambda/node_modules/
+lambda/*.zip
