@@ -52,6 +52,7 @@ function signS3Request(method, key, body) {
 
     if (body) {
         headers['content-type'] = 'application/json';
+        headers['content-length'] = String(Buffer.byteLength(body, 'utf8'));
     }
 
     const canonicalHeaderEntries = Object.keys(headers)
