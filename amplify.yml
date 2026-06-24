@@ -22,3 +22,6 @@ customRedirects:
   - source: /admin
     target: /admin.html
     status: '200'
+  - source: /api/<*>
+    target: https://ibun2wf5kgklrkboqva5zwgzpe0kvaso.lambda-url.ap-south-1.on.aws/api/<*>
+    status: '200'
