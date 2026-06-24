@@ -2,8 +2,5 @@
   "name": "sumaitra-api",
   "version": "1.0.0",
   "private": true,
-  "main": "handler.js",
-  "dependencies": {
-    "@aws-sdk/client-s3": "^3.840.0"
-  }
+  "main": "handler.js"
 }

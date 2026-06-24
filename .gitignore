@@ -7,3 +7,4 @@ aws_setup.md
 DEPLOYMENT.md
 lambda/node_modules/
 lambda/*.zip
+lambda-deploy.zip
